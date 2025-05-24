@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточки с адаптивной высотой</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #DCDCDC;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Изменили на flex-start */
+            flex-wrap: wrap;
+            gap: 30px; /* Увеличили промежуток */
+            padding: 20px;
+        }
+
+        .card {
+            width: 300px;
+            min-height: 400px;
+            height: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            min-height: 450px;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover img {
+        transform: scale(1.5); /* Увеличение на 50% */
+        z-index: 10; /* Чтобы фото не обрезалось другими элементами */
+        }
+
+        .card:hover img {
+            max-height: 300px;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            color: #333;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .card p.email {
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Карточки пользователей</h1>
+    <!-- Карточка 1 -->
+    <div class="card">
+        <img src="img/img 1.jpg" alt="Фото">
+        <div class="card-content">
+            <h2>Иванов Иван Иванович</h2>
+            <p class="email">ivanov@example.com</p>
+            <p><strong>Дата рождения:</strong> 15.03.1990</p>
+            <p><strong>Город:</strong> Москва</p>
+        </div>
+    </div>
+
+     <!-- Карточка 2 -->
+    <div class="card">
+        <img src="img/img 2.jpg" alt="Фото пользователя">
+        <div class="card-content">
+            <h2>Петрова Мария Сергеевна</h2>
+            <p class="email">petrova@example.com</p>
+            <p><strong>Дата рождения:</strong> 22.07.2000</p>
+            <p><strong>Город:</strong> Санкт-Петербург</p>
+        </div>
+    </div>
+
+    <!-- Карточка 3 -->
+    <div class="card">
+        <img src="img/imj 3.jpg" alt="Фото пользователя">
+        <div class="card-content">
+            <h2>Сидоров Алексей Викторович</h2>
+            <p class="email">sidorov@example.com</p>
+            <p><strong>Дата рождения:</strong> 10.11.1995</p>
+            <p><strong>Город:</strong> Екатеринбург</p>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
